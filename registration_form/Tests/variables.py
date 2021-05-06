@@ -14,6 +14,6 @@ hobbies_sports = "//label[contains(text(),'Sports')]"
 hobbies_reading = "//label[contains(text(),'Reading')]"
 hobbies_music = "//label[contains(text(),'Music')]"
 fill_address = "//textarea[@id='currentAddress']"
-state_combobox = "div.body-height:nth-child(2) div.container.playgound-body div.row div.col-12.mt-4.col-md-6:nth-child(2) div.practice-form-wrapper div.mt-2.row:nth-child(10) div.col-md-4.col-sm-12:nth-child(2) div.css-2b097c-container div.css-yk16xz-control > div.css-1wy0on6"
+state_combobox = "//body/div[@id='app']/div[1]/div[1]/div[2]/div[2]/div[1]/form[1]/div[10]/div[2]/div[1]/div[1]/div[2]/div[1]"
 
 submit = "//button[@id='submit']"

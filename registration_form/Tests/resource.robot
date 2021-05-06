@@ -1,7 +1,8 @@
 *** Settings ***
 
-Library           SeleniumLibrary
-Library           Browser
+Library         SeleniumLibrary
+Library         Browser
+
 
 *** Keywords ***
 Open Form
@@ -32,14 +33,22 @@ Input Phone Number "${input_phone}" with "${phone_value}"
 
 
 Clear Date of Birth "${input_date_of_birth}"
-    Clear Element Text      "${input_date_of_birth}"
+    Clear Text      "${input_date_of_birth}"
 
 Input Date of Birth "${input_date_of_birth}" with "${date_of_birth_value}"
-    Click Element       ${input_date_of_birth}
-    Fill Text          ${input_date_of_birth}     ${date_of_birth_value}
+    Input Text          ${input_date_of_birth}     ${date_of_birth_value}
+
+Choose Hobbies_Sports
+    Click Element       ${hobbies_sports}
+
 
 State
     Click Element       css:"${state_combobox}"
 
+Scroll to Element
+    [Arguments]    ${element}
+    Scroll Element Into View    ${element}
+    SeleniumLibrary.Execute JavaScript    window.scrollBy(0, 65)
+
 Submit
-    Click Button        Submit
+    Click Button   ${submit}

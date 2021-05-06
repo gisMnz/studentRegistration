@@ -1,26 +1,28 @@
 *** Settings ***
-Resource        resource.txt
+Resource        resource.robot
 Variables       variables.py
 Suite Setup     Open Form
 Suite Teardown  SeleniumLibrary.Close Browser
 
 *** Test Cases ***
 *** Comments ***
-
 AT-001 - Registration - Successfull Registration
     [Documentation]     *Title:* AT-001 - Registration - Successfull Registration
-    Open Form
     Input First Name "${input_firstName}" with "João"
     Input Last Name "${input_lastName}" with "Santos"
     Choose Gender_M
     Input Phone Number "${input_phone}" with "9876543210"
     #Clear Date of Birth "${input_date_of_birth}"
-    Input Date of Birth "${input_date_of_birth}" with "= 30 April 2021"
+    #Input Date of Birth "${input_date_of_birth}" with "= 30 April 2021"
+    Choose Hobbies_Sports
     State
     #SeleniumLibrary.Execute JavaScript    window.scrollTo(0, document.body.scrollHeight)
+    Scroll Element Into View    ${submit}
     Submit
 
 *** Test Cases ***
+
+
 
 AT-003 - Registration - Mandatory fields only
     [Documentation]     *Title:* AT-003 - Registration - Mandatory fields only
@@ -28,7 +30,8 @@ AT-003 - Registration - Mandatory fields only
     Input Last Name "${input_lastName}" with "S"
     Choose Gender_O
     Input Phone Number "${input_phone}" with "9876543210"
-    SeleniumLibrary.Execute JavaScript    window.scrollTo(0, document.body.scrollHeight)
-    #Scroll Element Into View    "${submit}"
+    #SeleniumLibrary.Execute JavaScript    window.scrollTo(0, document.body.scrollHeight)
+    Scroll to Element    ${submit}
     Submit
+    Capture Page Screenshot
 
