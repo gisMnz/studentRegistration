@@ -39,11 +39,11 @@ Input Date of Birth "${input_date_of_birth}" with "${date_of_birth_value}"
     Input Text          ${input_date_of_birth}     ${date_of_birth_value}
 
 Choose Hobbies_Sports
-    Click Element       ${hobbies_sports}
+    Click Element    ${hobbies_sports}
 
 
 State
-    Click Element       css:"${state_combobox}"
+    Click Element    ${state_combobox}
 
 Scroll to Element
     [Arguments]    ${element}
