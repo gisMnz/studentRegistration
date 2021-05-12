@@ -33,14 +33,28 @@ Input Phone Number ${input_phone} with ${phone_value}
 
 
 Clear Date of Birth ${input_date_of_birth}
-    Clear Text      ${input_date_of_birth}
+    Clear Element Text      ${input_date_of_birth}
 
-Input Date of Birth ${input_date_of_birth} with ${date_of_birth_value}
-    Input Text          ${input_date_of_birth}     ${date_of_birth_value}
+Input Date of Birth
+    [Arguments]    ${date_of_birth_year}     ${date_of_birth_month}
+    Click Element    ${input_date_of_birth}
+    Select From List By Label     ${date_of_birth_year_drop_down}    ${date_of_birth_year}
+    Select From List By Label     ${date_of_birth_month_drop_down}    ${date_of_birth_month}
+    Click Element    ${date_of_birth_day_drop_down}
 
 Choose Hobbies_Sports
     Click Element    ${hobbies_sports}
 
+Input Subjects ${input_subjects} with ${subjects_value}
+    Input Text          ${input_subjects}     ${subjects_value}
+
+Choose Subjects Arts
+    Click Element    ${input_subjects_arts}
+
+Attach File
+    #Scroll Element Into View    ${choose_file}
+    #Click Element    ${choose_file}
+    Choose File    ${choose_file}   ${file}
 
 State
     Click Element    ${state_combobox}

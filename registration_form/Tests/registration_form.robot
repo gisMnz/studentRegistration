@@ -13,10 +13,14 @@ AT-001 - Registration - Successfull Registration
     Input Last Name ${input_lastName} with Santos
     Choose Gender_M
     Input Phone Number ${input_phone} with 9876543210
-    #Clear Date of Birth "${input_date_of_birth}"
-    #Input Date of Birth "${input_date_of_birth}" with "= 30 April 2021"
+    #Clear Date of Birth ${input_date_of_birth}
+    #Input Date of Birth    1980    April
+    Input Subjects ${input_subjects} with Arts
+    Choose Subjects Arts
     Scroll to Element    ${hobbies_sports}
+    Wait Until Element Contains    ${hobbies_sports}    Sports    2
     Choose Hobbies_Sports
+    Attach File
     State
     #SeleniumLibrary.Execute JavaScript    window.scrollTo(0, document.body.scrollHeight)
     Scroll to Element    ${submit}
