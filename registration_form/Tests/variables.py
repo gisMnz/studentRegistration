@@ -20,6 +20,6 @@ hobbies_music = "//label[contains(text(),'Music')]"
 choose_file = "//input[@id='uploadPicture']"
 file = "C:\\Users\\gmenezes\\Projects\\Student_Registration\\registration_form\\Tests\\Wallpaper.jpg"
 fill_address = "//textarea[@id='currentAddress']"
-state_combobox = "//body/div[@id='app']/div[1]/div[1]/div[2]/div[2]/div[1]/form[1]/div[10]/div[2]/div[1]/div[1]/div[2]/div[1]"
+state_combobox = "//*[@id='state']/div/div[1]"
 
 submit = "//button[@id='submit']"

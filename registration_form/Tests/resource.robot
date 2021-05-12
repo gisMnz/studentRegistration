@@ -56,7 +56,11 @@ Attach File
     #Click Element    ${choose_file}
     Choose File    ${choose_file}   ${file}
 
+Input Adress ${fill_address} with ${adress_value}
+    Input Text          ${fill_address}     ${adress_value}
+
 State
+    Scroll Element Into View    ${state_combobox}
     Click Element    ${state_combobox}
 
 Scroll to Element

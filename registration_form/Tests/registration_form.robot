@@ -21,6 +21,7 @@ AT-001 - Registration - Successfull Registration
     Wait Until Element Contains    ${hobbies_sports}    Sports    2
     Choose Hobbies_Sports
     Attach File
+    Input Adress ${fill_address} with Avenue, 1
     State
     #SeleniumLibrary.Execute JavaScript    window.scrollTo(0, document.body.scrollHeight)
     Scroll to Element    ${submit}
