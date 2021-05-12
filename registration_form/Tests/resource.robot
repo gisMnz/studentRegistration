@@ -13,10 +13,10 @@ Open Form
 ToolsQA Page Should Be Open
     Title Should Be     ToolsQA
 
-Input First Name "${input_firstName}" with "${firstName_value}"
+Input First Name ${input_firstName} with ${firstName_value}
     Input Text          ${input_firstName}     ${firstName_value}
 
-Input Last Name "${input_lastName}" with "${lastName_value}"
+Input Last Name ${input_lastName} with ${lastName_value}
     Input Text          ${input_lastName}     ${lastName_value}
 
 Choose Gender_M
@@ -28,14 +28,14 @@ Choose Gender_F
 Choose Gender_O
     Click Element       ${gender_o}
 
-Input Phone Number "${input_phone}" with "${phone_value}"
+Input Phone Number ${input_phone} with ${phone_value}
     Input Text          ${input_phone}     ${phone_value}
 
 
-Clear Date of Birth "${input_date_of_birth}"
-    Clear Text      "${input_date_of_birth}"
+Clear Date of Birth ${input_date_of_birth}
+    Clear Text      ${input_date_of_birth}
 
-Input Date of Birth "${input_date_of_birth}" with "${date_of_birth_value}"
+Input Date of Birth ${input_date_of_birth} with ${date_of_birth_value}
     Input Text          ${input_date_of_birth}     ${date_of_birth_value}
 
 Choose Hobbies_Sports
