@@ -65,7 +65,7 @@ Attach File
     Choose File    ${choose_file}   ${file}
 
 Input Adress ${fill_address} with ${adress_value}
-    Input Text          ${fill_address}     ${adress_value}
+    Input Text         ${fill_address}     ${adress_value}
 
 
 Choose State NCR
