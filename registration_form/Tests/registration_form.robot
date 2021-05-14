@@ -32,6 +32,8 @@ AT-001 - Registration - Successfull Registration
     Validation Success Scenario     João    Santos    9876543210    Avenue, 1
     Close Form
 
+*** Comments ***
+
 AT-003 - Registration - Mandatory fields only
     [Documentation]     *Title:* AT-003 - Registration - Mandatory fields only
     Open Form
@@ -43,6 +45,8 @@ AT-003 - Registration - Mandatory fields only
     Submit
     Capture Page Screenshot
     Close Form
+
+*** Test Cases ***
 
 AT-004 - Registration - Unsuccessful Registration due to invalid email
     [Documentation]     *Title:* AT-004 - Registration - Unsuccessful Registration due to invalid email

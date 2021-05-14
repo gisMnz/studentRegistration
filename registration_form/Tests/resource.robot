@@ -104,10 +104,9 @@ Validation Success Scenario
     [Arguments]     ${firstName_value}       ${lastName_value}      ${phone_value}      ${adress_value}
     Wait Until Element Is Visible    ${dialog}
     Page Should Contain    Thanks for submitting the form
-    Page Should Contain    ${firstName_value}
-    Page Should Contain    ${lastName_value}
-    Page Should Contain    ${phone_value}
-    Page Should Contain    ${adress_value}
+    Element Text Should Be    ${student_name}    ${firstName_value} ${lastName_value}
+    Element Text Should Be    ${mobile}    ${phone_value}
+    Element Text Should Be    ${adress}    ${adress_value}
 
 Validation Unsuccessful Scenario
     Element Should Not Be Visible    ${dialog}

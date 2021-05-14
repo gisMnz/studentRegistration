@@ -27,8 +27,9 @@ city_combobox = "id:city"
 input_city_noida = "//div[contains(@id, 'react-select-4-option-2')]"
 input_state_haryana = "//div[contains(@id, 'react-select-3-option-2')]"
 input_city_karnal = "//div[contains(@id, 'react-select-4-option-0')]"
-
-
+student_name = "css:body.modal-open:nth-child(2) div.fade.modal.show:nth-child(5) div.modal-dialog.modal-lg div.modal-content div.modal-body div.table-responsive table.table.table-dark.table-striped.table-bordered.table-hover tbody:nth-child(2) tr:nth-child(1) > td:nth-child(2)"
+mobile = "css:body.modal-open:nth-child(2) div.fade.modal.show:nth-child(5) div.modal-dialog.modal-lg div.modal-content div.modal-body div.table-responsive table.table.table-dark.table-striped.table-bordered.table-hover tbody:nth-child(2) tr:nth-child(4) > td:nth-child(2)"
+adress = "css:body.modal-open:nth-child(2) div.fade.modal.show:nth-child(5) div.modal-dialog.modal-lg div.modal-content div.modal-body div.table-responsive table.table.table-dark.table-striped.table-bordered.table-hover tbody:nth-child(2) tr:nth-child(9) > td:nth-child(2)"
 submit = "//button[@id='submit']"
 close_button = "//button[@id='closeLargeModal']"
 dialog = "//body/div[3]/div[1]/div[1]"
