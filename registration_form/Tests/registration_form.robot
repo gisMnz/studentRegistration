@@ -1,14 +1,14 @@
 *** Settings ***
 Resource        resource.robot
 Variables       variables.py
-Suite Setup     Open Form
-Suite Teardown  Close Form
+#Suite Setup     Open Form
+#Suite Teardown  Close Form
 
 *** Test Cases ***
 
-
 AT-001 - Registration - Successfull Registration
     [Documentation]     *Title:* AT-001 - Registration - Successfull Registration
+    Open Form
     Input First Name ${input_firstName} with João
     Input Last Name ${input_lastName} with Santos
     Input email ${input_email} with joao@example.com
@@ -30,14 +30,11 @@ AT-001 - Registration - Successfull Registration
     Scroll to Element    ${submit}
     Submit
     Validation Success Scenario     João    Santos    9876543210    Avenue, 1
-
-
-*** Test Cases ***
-
-*** Comments ***
+    Close Form
 
 AT-003 - Registration - Mandatory fields only
     [Documentation]     *Title:* AT-003 - Registration - Mandatory fields only
+    Open Form
     Input First Name ${input_firstName} with S
     Input Last Name ${input_lastName} with S
     Choose Gender_O
@@ -45,11 +42,11 @@ AT-003 - Registration - Mandatory fields only
     Scroll to Element    ${submit}
     Submit
     Capture Page Screenshot
-
-*** Test Cases ***
+    Close Form
 
 AT-004 - Registration - Unsuccessful Registration due to invalid email
     [Documentation]     *Title:* AT-004 - Registration - Unsuccessful Registration due to invalid email
+    Open Form
     Input First Name ${input_firstName} with João
     Input Last Name ${input_lastName} with Santos
     Input email ${input_email} with @example.com
@@ -71,3 +68,4 @@ AT-004 - Registration - Unsuccessful Registration due to invalid email
     Scroll to Element    ${submit}
     Submit
     Validation Unsuccessful Scenario
+    Close Form
