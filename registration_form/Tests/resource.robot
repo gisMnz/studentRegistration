@@ -43,7 +43,7 @@ Input Date of Birth
     Click Element    ${input_date_of_birth}
     Select From List By Label     ${date_of_birth_year_drop_down}    ${date_of_birth_year}
     Select From List By Label     ${date_of_birth_month_drop_down}    ${date_of_birth_month}
-    Click Element    ${date_of_birth_day_drop_down}
+    Click Element    ${date_of_birth_day_20}
 
 Choose Hobbies_Sports
     Click Element    ${hobbies_sports}
