@@ -38,7 +38,6 @@ QAEX-TA-001 - Registration - Successfull Registration
     Validation Success Scenario     João    Santos    9876543210    Avenue, 1
 
 
-
 QAEX-TA-004 - Registration - Unsuccessful Registration due to invalid email
     [Documentation]     *Title:* QAEX-TA-004 - Registration - Unsuccessful Registration due to invalid email
     ...
@@ -71,14 +70,13 @@ QAEX-TA-004 - Registration - Unsuccessful Registration due to invalid email
     Validation Unsuccessful Scenario
 
 
-
 QAEX-TA-005 - Registration - Unsuccessful Registration due to invalid Date of Birth
     [Documentation]     *Title:* QAEX-TA-005 - Registration - Unsuccessful Registration due to invalid Date of Birth
     ...
     ...     *Description:* Check if the user is able to enter wrong data(Date of Birth), submit the form and then the dialog window is not displayed
     ...
     ...     *Owner:* Gislaine Menezes
-    [Tags]      RF.01       QAEX-TA-005      BUG-QAEX-001
+    [Tags]      RF.01       QAEX-TA-005      FAILED     BUG-QAEX-001
     [Setup]     Open Form
     [Teardown]      Close Form
     Input First Name ${input_firstName} with João
@@ -105,15 +103,13 @@ QAEX-TA-005 - Registration - Unsuccessful Registration due to invalid Date of Bi
 
 
 
-*** Comments ***
-
 QAEX-TA-003 - Registration - Mandatory fields only
-    [Documentation]     *Title:* AT-003 - Registration - Mandatory fields only
+    [Documentation]     *Title:* QAEX-TA-003 - Registration - Mandatory fields only
     ...
     ...     *Description:*
     ...
     ...     *Owner:* Gislaine Menezes
-    [Tags]
+    [Tags]      RF.01       QAEX-TA-003     PASSED
     [Setup]     Open Form
     [Teardown]      Close Form
     Input First Name ${input_firstName} with S
@@ -122,5 +118,5 @@ QAEX-TA-003 - Registration - Mandatory fields only
     Input Phone Number ${input_phone} with 9876543210
     Scroll to Element    ${submit}
     Submit
-    Capture Page Screenshot
+    Validation Success Scenario    S    S    9876543210    ${EMPTY}
 

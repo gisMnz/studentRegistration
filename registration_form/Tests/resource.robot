@@ -113,6 +113,6 @@ Validation Unsuccessful Scenario
     Capture Element Screenshot    ${input_email}
 
 Close Form
-    Capture Page Screenshot
+    Capture Page Screenshot     #Refactor: Take Screenshot fullPage (dialog) ou outra forma
     SeleniumLibrary.Close Browser
 
