@@ -4,6 +4,7 @@ Variables       variables.py
 
 *** Test Cases ***
 
+*** Comments ***
 
 QAEX-TA-001 - Registration - Successfull Registration
     [Documentation]
@@ -37,7 +38,50 @@ QAEX-TA-001 - Registration - Successfull Registration
     Submit
     Validation Success Scenario     João    Santos    9876543210    Avenue, 1
 
+*** Test Cases ***
 
+QAEX-TA-002 - Registration - Successfull Registration with three hobbies and three subjects
+    [Documentation]
+    ...     *Title:* QAEX-TA-002 - Registration - Successfull Registration with three hobbies and three subjects
+    ...
+    ...     *Description:* Verify if the user is able to enter the correct data, submit the form and see its data in the dialog window
+    ...
+    ...     *Owner:* Gislaine Menezes
+    [Tags]      RF.01       QAEX-TA-002      PASSED
+    [Setup]     Open Form
+    [Teardown]      Close Form
+    Input First Name ${input_firstName} with Maria
+    Input Last Name ${input_lastName} with Santos
+    Input email ${input_email} with maria@example.com
+    Choose Gender_F
+    Input Phone Number ${input_phone} with 0000000000
+    Clear Date of Birth ${input_date_of_birth}
+    Input Date of Birth    1980    April
+    Input Subjects ${input_subjects} with Biology
+    Choose Subjects Biology
+    Input Subjects ${input_subjects} with Hindi
+    Choose Subjects Hindi
+    Input Subjects ${input_subjects} with Maths
+    Choose Subjects Maths
+    Scroll to Element    ${hobbies_sports}
+    Wait Until Element Contains    ${hobbies_sports}    Sports    2
+    Choose Hobbies_Sports
+    Choose Hobbies_Reading
+    Choose Hobbies_Music
+    Attach File
+    Input Adress ${fill_address} with Avenue, 1
+    Scroll to Element    ${state_combobox}
+    Choose State RAJASTHAN
+    Scroll to Element    ${city_combobox}
+    Choose City Jaipur
+    Scroll to Element    ${submit}
+    Submit
+    Validation Success Scenario     Maria    Santos    0000000000    Avenue, 1
+
+
+*** Test Cases ***
+
+*** Comments ***
 QAEX-TA-004 - Registration - Unsuccessful Registration due to invalid email
     [Documentation]     *Title:* QAEX-TA-004 - Registration - Unsuccessful Registration due to invalid email
     ...

@@ -48,6 +48,9 @@ Input Date of Birth
 Choose Hobbies_Sports
     Click Element    ${hobbies_sports}
 
+Choose Hobbies_Reading
+    Click Element    ${hobbies_reading}
+
 Choose Hobbies_Music
     Click Element    ${hobbies_music}
 
@@ -58,6 +61,13 @@ Input Subjects ${input_subjects} with ${subjects_value}
 Choose Subjects Arts
     Click Element    ${input_subjects_arts}
 
+Choose Subjects Biology
+    Click Element    ${input_subjects_biology}
+
+Choose Subjects Hindi
+    Wait Until Element Is Visible       ${input_subjects_hindi}
+    Click Element    ${input_subjects_hindi}
+
 Choose Subjects Maths
     Click Element    ${input_subjects_maths}
 
@@ -66,7 +76,6 @@ Attach File
 
 Input Adress ${fill_address} with ${adress_value}
     Input Text         ${fill_address}     ${adress_value}
-
 
 Choose State NCR
     Click Element    ${state_combobox}
@@ -79,6 +88,18 @@ Choose City Noida
     Wait Until Element Is Visible    ${input_city_noida}
     Scroll to Element    ${input_city_noida}
     Click Element    ${input_city_noida}
+
+Choose State RAJASTHAN
+    Click Element    ${state_combobox}
+    Wait Until Element Is Visible    ${input_state_rajasthan}
+    Scroll to Element    ${input_state_rajasthan}
+    Click Element    ${input_state_rajasthan}
+
+Choose City Jaipur
+    Click Element    ${city_combobox}
+    Wait Until Element Is Visible    ${input_city_jaipur}
+    Scroll to Element    ${input_city_jaipur}
+    Click Element    ${input_city_jaipur}
 
 Choose State HARYANA
     Click Element    ${state_combobox}
