@@ -3,7 +3,6 @@ Resource        resource.robot
 Variables       variables.py
 Suite Setup     Remove Old Results
 
-
 *** Test Cases ***
 
 QAEX-TA-001 - Registration - Successfull Registration
@@ -37,8 +36,6 @@ QAEX-TA-001 - Registration - Successfull Registration
     Scroll to Element    ${submit}
     Submit
     Validation Success Scenario     João    Santos    9876543210    Avenue, 1
-
-
 
 QAEX-TA-002 - Registration - Successfull Registration with three hobbies and three subjects
     [Documentation]
@@ -95,7 +92,6 @@ QAEX-TA-003 - Registration - Mandatory fields only
     Submit
     Validation Success Scenario    S    S    9876543210    ${EMPTY}
 
-
 QAEX-TA-004 - Registration - Unsuccessful Registration due to invalid email
     [Documentation]     *Title:* QAEX-TA-004 - Registration - Unsuccessful Registration due to invalid email
     ...
@@ -126,7 +122,6 @@ QAEX-TA-004 - Registration - Unsuccessful Registration due to invalid email
     Scroll to Element    ${submit}
     Submit
     Validation Unsuccessful Scenario
-
 
 QAEX-TA-005 - Registration - Unsuccessful Registration due to invalid Date of Birth
     [Documentation]     *Title:* QAEX-TA-005 - Registration - Unsuccessful Registration due to invalid Date of Birth

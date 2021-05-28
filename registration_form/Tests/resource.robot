@@ -1,18 +1,14 @@
 *** Settings ***
-
-Library    variables.py
 Library    SeleniumLibrary
 Library    Browser
 Library    ScreenCapLibrary
 Library    utils.py
-
 
 *** Keywords ***
 
 Remove Old Results
     Remove Old Log Prints    .png
     Remove Old Log Prints    .webm
-
 
 Open Form
     SeleniumLibrary.Open Browser    ${url}    ${browser}
@@ -44,7 +40,6 @@ Choose Gender_O
 Input Phone Number ${input_phone} with ${phone_value}
     Input Text          ${input_phone}     ${phone_value}
 
-
 Clear Date of Birth ${input_date_of_birth}
     Clear Element Text      ${input_date_of_birth}
 
@@ -63,7 +58,6 @@ Choose Hobbies_Reading
 
 Choose Hobbies_Music
     Click Element    ${hobbies_music}
-
 
 Input Subjects ${input_subjects} with ${subjects_value}
     Input Text          ${input_subjects}     ${subjects_value}
