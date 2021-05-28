@@ -1,10 +1,10 @@
 *** Settings ***
 Resource        resource.robot
 Variables       variables.py
+Suite Setup     Remove Old Results
+
 
 *** Test Cases ***
-
-*** Comments ***
 
 QAEX-TA-001 - Registration - Successfull Registration
     [Documentation]
@@ -38,7 +38,7 @@ QAEX-TA-001 - Registration - Successfull Registration
     Submit
     Validation Success Scenario     João    Santos    9876543210    Avenue, 1
 
-*** Test Cases ***
+
 
 QAEX-TA-002 - Registration - Successfull Registration with three hobbies and three subjects
     [Documentation]
@@ -78,10 +78,24 @@ QAEX-TA-002 - Registration - Successfull Registration with three hobbies and thr
     Submit
     Validation Success Scenario     Maria    Santos    0000000000    Avenue, 1
 
+QAEX-TA-003 - Registration - Mandatory fields only
+    [Documentation]     *Title:* QAEX-TA-003 - Registration - Mandatory fields only
+    ...
+    ...     *Description:*
+    ...
+    ...     *Owner:* Gislaine Menezes
+    [Tags]      RF.01       QAEX-TA-003     PASSED
+    [Setup]     Open Form
+    [Teardown]      Close Form
+    Input First Name ${input_firstName} with S
+    Input Last Name ${input_lastName} with S
+    Choose Gender_O
+    Input Phone Number ${input_phone} with 9876543210
+    Scroll to Element    ${submit}
+    Submit
+    Validation Success Scenario    S    S    9876543210    ${EMPTY}
 
-*** Test Cases ***
 
-*** Comments ***
 QAEX-TA-004 - Registration - Unsuccessful Registration due to invalid email
     [Documentation]     *Title:* QAEX-TA-004 - Registration - Unsuccessful Registration due to invalid email
     ...
@@ -147,20 +161,4 @@ QAEX-TA-005 - Registration - Unsuccessful Registration due to invalid Date of Bi
 
 
 
-QAEX-TA-003 - Registration - Mandatory fields only
-    [Documentation]     *Title:* QAEX-TA-003 - Registration - Mandatory fields only
-    ...
-    ...     *Description:*
-    ...
-    ...     *Owner:* Gislaine Menezes
-    [Tags]      RF.01       QAEX-TA-003     PASSED
-    [Setup]     Open Form
-    [Teardown]      Close Form
-    Input First Name ${input_firstName} with S
-    Input Last Name ${input_lastName} with S
-    Choose Gender_O
-    Input Phone Number ${input_phone} with 9876543210
-    Scroll to Element    ${submit}
-    Submit
-    Validation Success Scenario    S    S    9876543210    ${EMPTY}
 

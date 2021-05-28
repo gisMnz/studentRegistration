@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
+
 browser = "chrome"
 url = "https://demoqa.com/automation-practice-form"
 # Xpaths
@@ -22,7 +25,7 @@ hobbies_sports = "//label[contains(text(),'Sports')]"
 hobbies_reading = "//label[contains(text(),'Reading')]"
 hobbies_music = "//label[contains(text(),'Music')]"
 choose_file = "//input[@id='uploadPicture']"
-file = "C:\\Users\\gmenezes\\Projects\\Student_Registration\\registration_form\\Tests\\Wallpaper.jpg"
+file = "C:\\projects\\robot-scripts\\Student_Registration\\registration_form\\Tests\\Wallpaper.jpg"
 fill_address = "//textarea[@id='currentAddress']"
 state_combobox = "id:state"
 city_combobox = "id:city"
