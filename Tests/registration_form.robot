@@ -1,6 +1,6 @@
 *** Settings ***
-Resource        resource.robot
-Variables       variables.py
+Resource        ../Resources/resource.robot
+Variables       ../Resources/variables.py
 Suite Setup     Remove Old Results
 
 *** Test Cases ***
@@ -20,8 +20,7 @@ QAEX-TA-001 - Registration - Successfull Registration
     Input email ${input_email} with joao@example.com
     Choose Gender_M
     Input Phone Number ${input_phone} with 9876543210
-    Clear Date of Birth ${input_date_of_birth}
-    Input Date of Birth    1980    April
+    Input Date of Birth    ${input_date_of_birth}   1980    April
     Input Subjects ${input_subjects} with Arts
     Choose Subjects Arts
     Scroll to Element    ${hobbies_sports}
@@ -52,8 +51,7 @@ QAEX-TA-002 - Registration - Successfull Registration with three hobbies and thr
     Input email ${input_email} with maria@example.com
     Choose Gender_F
     Input Phone Number ${input_phone} with 0000000000
-    Clear Date of Birth ${input_date_of_birth}
-    Input Date of Birth    1980    April
+    Input Date of Birth   ${input_date_of_birth}     1980    April
     Input Subjects ${input_subjects} with Biology
     Choose Subjects Biology
     Input Subjects ${input_subjects} with Hindi
@@ -106,8 +104,7 @@ QAEX-TA-004 - Registration - Unsuccessful Registration due to invalid email
     Input email ${input_email} with @example.com
     Choose Gender_M
     Input Phone Number ${input_phone} with 1234567890
-    Clear Date of Birth ${input_date_of_birth}
-    Input Date of Birth    1980    April
+    Input Date of Birth  ${input_date_of_birth}  1980    April
     Input Subjects ${input_subjects} with Maths
     Choose Subjects Maths
     Scroll to Element    ${hobbies_music}
@@ -137,8 +134,7 @@ QAEX-TA-005 - Registration - Unsuccessful Registration due to invalid Date of Bi
     Input email ${input_email} with joao@example.com
     Choose Gender_M
     Input Phone Number ${input_phone} with 1234567890
-    Clear Date of Birth ${input_date_of_birth}
-    Input Date of Birth    2100    May
+    Input Date of Birth     ${input_date_of_birth}  2100    May
     Input Subjects ${input_subjects} with Arts
     Choose Subjects Arts
     Scroll to Element    ${hobbies_sports}

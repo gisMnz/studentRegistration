@@ -40,11 +40,9 @@ Choose Gender_O
 Input Phone Number ${input_phone} with ${phone_value}
     Input Text          ${input_phone}     ${phone_value}
 
-Clear Date of Birth ${input_date_of_birth}
-    Clear Element Text      ${input_date_of_birth}
-
 Input Date of Birth
-    [Arguments]    ${date_of_birth_year}     ${date_of_birth_month}
+    [Arguments]    ${input_date_of_birth}   ${date_of_birth_year}     ${date_of_birth_month}
+    Clear Element Text      ${input_date_of_birth}
     Click Element    ${input_date_of_birth}
     Select From List By Label     ${date_of_birth_year_drop_down}    ${date_of_birth_year}
     Select From List By Label     ${date_of_birth_month_drop_down}    ${date_of_birth_month}

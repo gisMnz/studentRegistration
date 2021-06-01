@@ -31,17 +31,23 @@ ___
 ### Run the test cases
  To run a test suite you need to be in the main folder "registration_form" and call the robot file from here. 
  And define the "Results" folder as the output dir.
-```cmd
+```
 robot --outputdir Results Tests\registration_form.robot
 ```
 or
 ```
 robot -d ./Results Tests\registration_form.robot
 ```
-To run a single test case, just inform the Test case name in -t argument:
-```cmd
-robot -d ./Results -t "QAEX-TA-003 - Registration - Mandatory fields only" Tests\registration_form.robot
+or
 ```
+robot -d ./Results -N "QAEX Tests" Tests
+```
+To run a single test case, just inform the Test case name in -t argument:
+```
+robot -d ./Results -N "Mandatory fields only" -t "QAEX-TA-003 - Registration - Mandatory f
+ields only" Tests
+```
+
 ___
 ### Results:
 registration_form/Results
