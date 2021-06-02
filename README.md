@@ -44,8 +44,7 @@ robot -d ./Results -N "QAEX Tests" Tests
 ```
 To run a single test case, just inform the Test case name in -t argument:
 ```
-robot -d ./Results -N "Mandatory fields only" -t "QAEX-TA-003 - Registration - Mandatory f
-ields only" Tests
+robot -d ./Results -N "Mandatory fields only" -t "QAEX-TA-003 - Registration - Mandatory fields only" Tests
 ```
 
 ___

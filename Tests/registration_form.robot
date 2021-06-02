@@ -1,5 +1,6 @@
 *** Settings ***
 Resource        ../Resources/resource.robot
+Resource        ../Resources/common.robot
 Variables       ../Resources/variables.py
 Suite Setup     Remove Old Results
 
@@ -21,16 +22,13 @@ QAEX-TA-001 - Registration - Successfull Registration
     Choose Gender_M
     Input Phone Number ${input_phone} with 9876543210
     Input Date of Birth    ${input_date_of_birth}   1980    April
-    Input Subjects ${input_subjects} with Arts
-    Choose Subjects Arts
-    Scroll to Element    ${hobbies_sports}
-    Wait Until Element Contains    ${hobbies_sports}    Sports    2
-    Choose Hobbies_Sports
+    Choose Subjects     ${input_subjects}   Arts    ${input_subjects_arts}
+    Choose Hobbies      ${hobbies_sports}   Sports  2
     Attach File
     Input Adress ${fill_address} with Avenue, 1
-    Scroll to Element    ${state_combobox}
+    Click State     ${state_combobox}
     Choose State NCR
-    Scroll to Element    ${city_combobox}
+    Click City    ${city_combobox}
     Choose City Noida
     Scroll to Element    ${submit}
     Submit
@@ -52,22 +50,17 @@ QAEX-TA-002 - Registration - Successfull Registration with three hobbies and thr
     Choose Gender_F
     Input Phone Number ${input_phone} with 0000000000
     Input Date of Birth   ${input_date_of_birth}     1980    April
-    Input Subjects ${input_subjects} with Biology
-    Choose Subjects Biology
-    Input Subjects ${input_subjects} with Hindi
-    Choose Subjects Hindi
-    Input Subjects ${input_subjects} with Maths
-    Choose Subjects Maths
-    Scroll to Element    ${hobbies_sports}
-    Wait Until Element Contains    ${hobbies_sports}    Sports    2
-    Choose Hobbies_Sports
-    Choose Hobbies_Reading
-    Choose Hobbies_Music
+    Choose Subjects    ${input_subjects}    Biology     ${input_subjects_biology}
+    Choose Subjects    ${input_subjects}    Hindi       ${input_subjects_hindi}
+    Choose Subjects    ${input_subjects}    Maths       ${input_subjects_maths}
+    Choose Hobbies     ${hobbies_sports}    Sports      2
+    Choose Hobbies     ${hobbies_reading}   Reading     2
+    Choose Hobbies     ${hobbies_music}     Music       2
     Attach File
     Input Adress ${fill_address} with Avenue, 1
-    Scroll to Element    ${state_combobox}
+    Click State     ${state_combobox}
     Choose State RAJASTHAN
-    Scroll to Element    ${city_combobox}
+    Click City    ${city_combobox}
     Choose City Jaipur
     Scroll to Element    ${submit}
     Submit
@@ -105,16 +98,13 @@ QAEX-TA-004 - Registration - Unsuccessful Registration due to invalid email
     Choose Gender_M
     Input Phone Number ${input_phone} with 1234567890
     Input Date of Birth  ${input_date_of_birth}  1980    April
-    Input Subjects ${input_subjects} with Maths
-    Choose Subjects Maths
-    Scroll to Element    ${hobbies_music}
-    Wait Until Element Contains    ${hobbies_music}    Music    2
-    Choose Hobbies_Music
+    Choose Subjects     ${input_subjects}   Maths   ${input_subjects_maths}
+    Choose Hobbies      ${hobbies_music}    Music   2
     Attach File
     Input Adress ${fill_address} with Avenue, 2
-    Scroll to Element    ${state_combobox}
+    Click State     ${state_combobox}
     Choose State HARYANA
-    Scroll to Element    ${city_combobox}
+    Click City    ${city_combobox}
     Choose City Karnal
     Scroll to Element    ${submit}
     Submit
@@ -135,16 +125,13 @@ QAEX-TA-005 - Registration - Unsuccessful Registration due to invalid Date of Bi
     Choose Gender_M
     Input Phone Number ${input_phone} with 1234567890
     Input Date of Birth     ${input_date_of_birth}  2100    May
-    Input Subjects ${input_subjects} with Arts
-    Choose Subjects Arts
-    Scroll to Element    ${hobbies_sports}
-    Wait Until Element Contains    ${hobbies_sports}    Sports    2
-    Choose Hobbies_Sports
+    Choose Subjects     ${input_subjects}   Arts    ${input_subjects_arts}
+    Choose Hobbies      ${hobbies_sports}   Sports   2
     Attach File
     Input Adress ${fill_address} with Avenue, 2
-    Scroll to Element    ${state_combobox}
+    Click State     ${state_combobox}
     Choose State HARYANA
-    Scroll to Element    ${city_combobox}
+    Click City    ${city_combobox}
     Choose City Karnal
     Scroll to Element    ${submit}
     Submit
