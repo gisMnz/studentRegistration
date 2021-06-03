@@ -1,6 +1,4 @@
-<h1 align="center" >
-<img src="Toolsqa1.png">
-</h1>
+![ ](External/Toolsqa1.png " ")
 
 
 # Robot Framework Exercise 
@@ -42,6 +40,10 @@ or
 ```
 robot -d ./Results -N "QAEX Tests" Tests
 ```
+or
+[Batch](run.bat)
+[Batch](C:\projects\robot-scripts\Student_Registration\run.bat)
+
 To run a single test case, just inform the Test case name in -t argument:
 ```
 robot -d ./Results -N "Mandatory fields only" -t "QAEX-TA-003 - Registration - Mandatory fields only" Tests
