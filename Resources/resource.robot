@@ -42,7 +42,7 @@ Choose Hobbies
 Choose Subjects
     [Arguments]      ${input_subjects}     ${subjects_value}    ${input_subjects_arts}
     Input Text       ${input_subjects}     ${subjects_value}
-    Click Element    ${input_subjects_arts}
+    Click Element    ${input_subjects_arts}   #ver variável
 
 Attach File
     Choose File    ${choose_file}   ${file}
@@ -56,16 +56,19 @@ Click State
     Click Element    ${state_combobox}
 
 Choose State NCR
+    Click State    ${state_combobox}
     Wait Until Element Is Visible    ${input_state_ncr}
     Scroll to Element    ${input_state_ncr}
     Click Element    ${input_state_ncr}
 
 Choose State RAJASTHAN
+    Click State    ${state_combobox}
     Wait Until Element Is Visible    ${input_state_rajasthan}
     Scroll to Element    ${input_state_rajasthan}
     Click Element    ${input_state_rajasthan}
 
 Choose State HARYANA
+    Click State    ${state_combobox}
     Wait Until Element Is Visible    ${input_state_haryana}
     Scroll to Element    ${input_state_haryana}
     Click Element    ${input_state_haryana}
@@ -76,16 +79,19 @@ Click City
     Click Element    ${city_combobox}
 
 Choose City Noida
+    Click City      ${city_combobox}
     Wait Until Element Is Visible    ${input_city_noida}
     Scroll to Element    ${input_city_noida}
     Click Element    ${input_city_noida}
 
 Choose City Jaipur
+    Click City      ${city_combobox}
     Wait Until Element Is Visible    ${input_city_jaipur}
     Scroll to Element    ${input_city_jaipur}
     Click Element    ${input_city_jaipur}
 
 Choose City Karnal
+    Click City      ${city_combobox}
     Wait Until Element Is Visible    ${input_city_karnal}
     Scroll to Element    ${input_city_karnal}
     Click Element    ${input_city_karnal}
@@ -96,6 +102,7 @@ Scroll to Element
     SeleniumLibrary.Execute JavaScript    window.scrollBy(0, 65)
 
 Submit
+    Scroll to Element    ${submit}
     Click Button   ${submit}
 
 Validation Success Scenario

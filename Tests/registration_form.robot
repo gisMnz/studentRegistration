@@ -26,11 +26,8 @@ QAEX-TA-001 - Registration - Successfull Registration
     Choose Hobbies      ${hobbies_sports}   Sports  2
     Attach File
     Input Adress ${fill_address} with Avenue, 1
-    Click State     ${state_combobox}
     Choose State NCR
-    Click City    ${city_combobox}
     Choose City Noida
-    Scroll to Element    ${submit}
     Submit
     Validation Success Scenario     João    Santos    9876543210    Avenue, 1
 
@@ -58,11 +55,8 @@ QAEX-TA-002 - Registration - Successfull Registration with three hobbies and thr
     Choose Hobbies     ${hobbies_music}     Music       2
     Attach File
     Input Adress ${fill_address} with Avenue, 1
-    Click State     ${state_combobox}
     Choose State RAJASTHAN
-    Click City    ${city_combobox}
     Choose City Jaipur
-    Scroll to Element    ${submit}
     Submit
     Validation Success Scenario     Maria    Santos    0000000000    Avenue, 1
 
@@ -79,7 +73,6 @@ QAEX-TA-003 - Registration - Mandatory fields only
     Input Last Name ${input_lastName} with S
     Choose Gender_O
     Input Phone Number ${input_phone} with 9876543210
-    Scroll to Element    ${submit}
     Submit
     Validation Success Scenario    S    S    9876543210    ${EMPTY}
 
@@ -102,11 +95,8 @@ QAEX-TA-004 - Registration - Unsuccessful Registration due to invalid email
     Choose Hobbies      ${hobbies_music}    Music   2
     Attach File
     Input Adress ${fill_address} with Avenue, 2
-    Click State     ${state_combobox}
     Choose State HARYANA
-    Click City    ${city_combobox}
     Choose City Karnal
-    Scroll to Element    ${submit}
     Submit
     Validation Unsuccessful Scenario
 
@@ -129,11 +119,8 @@ QAEX-TA-005 - Registration - Unsuccessful Registration due to invalid Date of Bi
     Choose Hobbies      ${hobbies_sports}   Sports   2
     Attach File
     Input Adress ${fill_address} with Avenue, 2
-    Click State     ${state_combobox}
     Choose State HARYANA
-    Click City    ${city_combobox}
     Choose City Karnal
-    Scroll to Element    ${submit}
     Submit
     Validation Unsuccessful Scenario
 
