@@ -1,17 +1,8 @@
 *** Settings ***
-
 Library    SeleniumLibrary
 Library    Browser
 
-
 *** Keywords ***
-Open Form
-    SeleniumLibrary.Open Browser    ${url}    ${browser}
-    Maximize Browser Window
-    ToolsQA Page Should Be Open
-
-ToolsQA Page Should Be Open
-    Title Should Be     ToolsQA
 
 Input First Name ${input_firstName} with ${firstName_value}
     Input Text          ${input_firstName}     ${firstName_value}
@@ -34,32 +25,24 @@ Choose Gender_O
 Input Phone Number ${input_phone} with ${phone_value}
     Input Text          ${input_phone}     ${phone_value}
 
-
-Clear Date of Birth ${input_date_of_birth}
-    Clear Element Text      ${input_date_of_birth}
-
 Input Date of Birth
-    [Arguments]    ${date_of_birth_year}     ${date_of_birth_month}
+    [Arguments]    ${input_date_of_birth}   ${date_of_birth_year}     ${date_of_birth_month}
+    Clear Element Text      ${input_date_of_birth}
     Click Element    ${input_date_of_birth}
     Select From List By Label     ${date_of_birth_year_drop_down}    ${date_of_birth_year}
     Select From List By Label     ${date_of_birth_month_drop_down}    ${date_of_birth_month}
-    Click Element    ${date_of_birth_day_drop_down}
+    Click Element    ${date_of_birth_day_20}
 
-Choose Hobbies_Sports
-    Click Element    ${hobbies_sports}
+Choose Hobbies
+    [Arguments]     ${hobbie}    ${hobbies_text}   ${time}
+    Scroll to Element    ${hobbie}
+    Wait Until Element Contains    ${hobbie}    ${hobbies_text}   ${time}
+    Click Element    ${hobbie}
 
-Choose Hobbies_Music
-    Click Element    ${hobbies_music}
-
-
-Input Subjects ${input_subjects} with ${subjects_value}
-    Input Text          ${input_subjects}     ${subjects_value}
-
-Choose Subjects Arts
-    Click Element    ${input_subjects_arts}
-
-Choose Subjects Maths
-    Click Element    ${input_subjects_maths}
+Choose Subjects
+    [Arguments]      ${input_subjects}     ${subjects_value}    ${input_subjects_arts}
+    Input Text       ${input_subjects}     ${subjects_value}
+    Click Element    ${input_subjects_arts}   #ver variável
 
 Attach File
     Choose File    ${choose_file}   ${file}
@@ -67,27 +50,48 @@ Attach File
 Input Adress ${fill_address} with ${adress_value}
     Input Text         ${fill_address}     ${adress_value}
 
+Click State
+    [Arguments]     ${state_combobox}
+    Scroll to Element    ${state_combobox}
+    Click Element    ${state_combobox}
 
 Choose State NCR
-    Click Element    ${state_combobox}
+    Click State    ${state_combobox}
     Wait Until Element Is Visible    ${input_state_ncr}
     Scroll to Element    ${input_state_ncr}
     Click Element    ${input_state_ncr}
 
-Choose City Noida
-    Click Element    ${city_combobox}
-    Wait Until Element Is Visible    ${input_city_noida}
-    Scroll to Element    ${input_city_noida}
-    Click Element    ${input_city_noida}
+Choose State RAJASTHAN
+    Click State    ${state_combobox}
+    Wait Until Element Is Visible    ${input_state_rajasthan}
+    Scroll to Element    ${input_state_rajasthan}
+    Click Element    ${input_state_rajasthan}
 
 Choose State HARYANA
-    Click Element    ${state_combobox}
+    Click State    ${state_combobox}
     Wait Until Element Is Visible    ${input_state_haryana}
     Scroll to Element    ${input_state_haryana}
     Click Element    ${input_state_haryana}
 
-Choose City Karnal
+Click City
+    [Arguments]     ${city_combobox}
+    Scroll to Element    ${city_combobox}
     Click Element    ${city_combobox}
+
+Choose City Noida
+    Click City      ${city_combobox}
+    Wait Until Element Is Visible    ${input_city_noida}
+    Scroll to Element    ${input_city_noida}
+    Click Element    ${input_city_noida}
+
+Choose City Jaipur
+    Click City      ${city_combobox}
+    Wait Until Element Is Visible    ${input_city_jaipur}
+    Scroll to Element    ${input_city_jaipur}
+    Click Element    ${input_city_jaipur}
+
+Choose City Karnal
+    Click City      ${city_combobox}
     Wait Until Element Is Visible    ${input_city_karnal}
     Scroll to Element    ${input_city_karnal}
     Click Element    ${input_city_karnal}
@@ -98,6 +102,7 @@ Scroll to Element
     SeleniumLibrary.Execute JavaScript    window.scrollBy(0, 65)
 
 Submit
+    Scroll to Element    ${submit}
     Click Button   ${submit}
 
 Validation Success Scenario
@@ -112,7 +117,9 @@ Validation Unsuccessful Scenario
     Element Should Not Be Visible    ${dialog}
     Capture Element Screenshot    ${input_email}
 
-Close Form
-    Capture Page Screenshot
-    SeleniumLibrary.Close Browser
+
+
+
+
+
 
