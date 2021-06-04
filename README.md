@@ -1,17 +1,16 @@
-<h1 align="center" >
-<img src="Toolsqa1.png">
-</h1>
-
-
-# Robot Framework Exercise 
-## Automation of testing a web form (Tools QA) using Robot Framework libraries
+![ ](External/Toolsqa1.png)
 
 
 <h4>
  <a href="https://demoqa.com/automation-practice-form"> Form tested - Tools QA</a>
 </h4>
 
+----
+# Robot Framework Exercise 
+## Automation of testing a web form (Tools QA) using Robot Framework libraries
 
+
+---
 ## Summary
 - [Run](#run)
   - [Test Cases](#test-cases)
@@ -42,6 +41,9 @@ or
 ```
 robot -d ./Results -N "QAEX Tests" Tests
 ```
+or
+[Batch](#run.bat)
+
 To run a single test case, just inform the Test case name in -t argument:
 ```
 robot -d ./Results -N "Mandatory fields only" -t "QAEX-TA-003 - Registration - Mandatory fields only" Tests
@@ -75,7 +77,7 @@ Auxiliar/Requirements analysis and design.pptx
  
 ___
 By 🤍 Gislaine Menezes 
-
+---
 
 
 
