@@ -1,4 +1,5 @@
 *** Settings ***
+
 Library    SeleniumLibrary
 Library    Browser
 
@@ -31,7 +32,7 @@ Input Date of Birth
     Click Element    ${input_date_of_birth}
     Select From List By Label     ${date_of_birth_year_drop_down}    ${date_of_birth_year}
     Select From List By Label     ${date_of_birth_month_drop_down}    ${date_of_birth_month}
-    Click Element    ${date_of_birth_day_20}
+    Click Element    ${date_of_birth_day_drop_down}
 
 Choose Hobbies
     [Arguments]     ${hobbie}    ${hobbies_text}   ${time}
@@ -116,10 +117,5 @@ Validation Success Scenario
 Validation Unsuccessful Scenario
     Element Should Not Be Visible    ${dialog}
     Capture Element Screenshot    ${input_email}
-
-
-
-
-
 
 
