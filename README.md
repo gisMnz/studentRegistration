@@ -1,16 +1,7 @@
-![ ](External/Toolsqa1.png)
-![ ](https://imgur.com/s5xom4v)
-
-
-
-<h1 align="center" >
-<img src="https://imgur.com/s5xom4v">
-</h1>
-
+<span style="display:block;text-align:center">![ ](External/Toolsqa1.png)</span>
 
 # Robot Framework Exercise 
 ## Automation of testing a web form (Tools QA) using Robot Framework libraries
-
 
 <h4>
  <a href="https://demoqa.com/automation-practice-form"> Form tested - Tools QA</a>
