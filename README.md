@@ -50,7 +50,6 @@ robot -d ./Results -N "QAEX Tests" Tests
 or
 [Batch](#run.bat)
 
-
 To run a single test case, just inform the Test case name in -t argument:
 ```
 robot -d ./Results -N "Mandatory fields only" -t "QAEX-TA-003 - Registration - Mandatory fields only" Tests
