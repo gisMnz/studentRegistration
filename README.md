@@ -1,7 +1,4 @@
 ![ ](External/Toolsqa1.png)
-
-
-
 ![ ](https://imgur.com/s5xom4v)
 
 
