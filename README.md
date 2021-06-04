@@ -8,7 +8,6 @@
 </h1>
 
 
-
 # Robot Framework Exercise 
 ## Automation of testing a web form (Tools QA) using Robot Framework libraries
 
