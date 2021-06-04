@@ -1,4 +1,15 @@
-![ ](External/Toolsqa1.png " ")
+![ ](External/Toolsqa1.png)
+
+
+
+![ ](https://imgur.com/s5xom4v)
+
+
+
+<h1 align="center" >
+<img src="https://imgur.com/s5xom4v">
+</h1>
+
 
 
 # Robot Framework Exercise 
@@ -41,8 +52,8 @@ or
 robot -d ./Results -N "QAEX Tests" Tests
 ```
 or
-[Batch](run.bat)
-[Batch](C:\projects\robot-scripts\Student_Registration\run.bat)
+[Batch](#run.bat)
+
 
 To run a single test case, just inform the Test case name in -t argument:
 ```
