@@ -1,13 +1,11 @@
-<span style="display:block;text-align:center">![ ](External/Toolsqa1.png)</span>
-
-# Robot Framework Exercise 
-## Automation of testing a web form (Tools QA) using Robot Framework libraries
-
+![ ](External/Toolsqa1.png) 
 <h4>
  <a href="https://demoqa.com/automation-practice-form"> Form tested - Tools QA</a>
 </h4>
+# Robot Framework Exercise 
+## Automation of testing a web form (Tools QA) using Robot Framework libraries
 
-
+---
 ## Summary
 - [Run](#run)
   - [Test Cases](#test-cases)
