@@ -75,7 +75,9 @@ registration_form/Results
 - Install Python dependencies
 
 ```shell
-python -m pip install -r robotframework-[libraries][#-libraries]
+python -m pip install -r robotframework-seleniumlibrary
+python -m pip install -r robotframework-browse
+python -m pip install -r robotframework-screencaplibrary
 ```
 
 ## 📖Libraries
