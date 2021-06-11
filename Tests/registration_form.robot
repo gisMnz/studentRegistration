@@ -6,14 +6,14 @@ Suite Setup     Remove Old Results
 
 *** Test Cases ***
 
-AT-001 - Registration - Successfull Registration
+QAEX-TA-001 - Registration - Successfull Registration
     [Documentation]
-    ...     *Title:* AT-001 - Registration - Successfull Registration
+    ...     *Title:* QAEX-TA-001 - Registration - Successfull Registration
     ...
     ...     *Description:* Verify if the user is able to enter the correct data, submit the form and see its data in the dialog window
     ...
     ...     *Owner:* Gislaine Menezes
-    [Tags]      RF.01       AT-001      Successfull
+    [Tags]      RF.01       QAEX-TA-001      PASSED
     [Setup]     Open Form
     [Teardown]      Close Form
     Input First Name ${input_firstName} with João
@@ -76,13 +76,13 @@ QAEX-TA-003 - Registration - Mandatory fields only
     Submit
     Validation Success Scenario    S    S    9876543210    ${EMPTY}
 
-AT-004 - Registration - Unsuccessful Registration due to invalid email
-    [Documentation]     *Title:* AT-004 - Registration - Unsuccessful Registration due to invalid email
+QAEX-TA-004 - Registration - Unsuccessful Registration due to invalid email
+    [Documentation]     *Title:* QAEX-TA-004 - Registration - Unsuccessful Registration due to invalid email
     ...
-    ...     *Description:* Check if the user is able to enter wrong data, submit the form and then the dialog window is not displayed
+    ...     *Description:* Check if the user is able to enter wrong data (email), submit the form and then the dialog window is not displayed
     ...
     ...     *Owner:* Gislaine Menezes
-    [Tags]      RF.01       AT-004      Unsuccessful
+    [Tags]      RF.01       QAEX-TA-004      PASSED
     [Setup]     Open Form
     [Teardown]      Close Form
     Input First Name ${input_firstName} with João
@@ -100,15 +100,13 @@ AT-004 - Registration - Unsuccessful Registration due to invalid email
     Submit
     Validation Unsuccessful Scenario
 
-*** Comments ***
-
-AT-003 - Registration - Mandatory fields only
-    [Documentation]     *Title:* AT-003 - Registration - Mandatory fields only
+QAEX-TA-005 - Registration - Unsuccessful Registration due to invalid Date of Birth
+    [Documentation]     *Title:* QAEX-TA-005 - Registration - Unsuccessful Registration due to invalid Date of Birth
     ...
-    ...     *Description:*
+    ...     *Description:* Check if the user is able to enter wrong data(Date of Birth), submit the form and then the dialog window is not displayed
     ...
     ...     *Owner:* Gislaine Menezes
-    [Tags]
+    [Tags]      RF.01       QAEX-TA-005      FAILED     BUG-QAEX-001
     [Setup]     Open Form
     [Teardown]      Close Form
     Input First Name ${input_firstName} with João
@@ -124,5 +122,4 @@ AT-003 - Registration - Mandatory fields only
     Choose State HARYANA
     Choose City Karnal
     Submit
-    Capture Page Screenshot
-
+    Validation Unsuccessful Scenario
